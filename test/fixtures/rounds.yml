@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  score: 1
+  fairways: 1
+  greens: 1
+  putts: 1
+
+two:
+  score: 1
+  fairways: 1
+  greens: 1
+  putts: 1

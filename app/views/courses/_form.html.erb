@@ -1,0 +1,101 @@
+<%= form_for(@course) do |f| %>
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% @course.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :par %><br />
+    <%= f.text_field :par %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :hole1 %><br />
+    <%= f.text_field :hole1 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole2 %><br />
+    <%= f.text_field :hole2 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole3 %><br />
+    <%= f.text_field :hole3 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole4 %><br />
+    <%= f.text_field :hole4 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole5 %><br />
+    <%= f.text_field :hole5 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole6 %><br />
+    <%= f.text_field :hole6 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole7 %><br />
+    <%= f.text_field :hole7 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole8 %><br />
+    <%= f.text_field :hole8 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole9 %><br />
+    <%= f.text_field :hole9 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole10 %><br />
+    <%= f.text_field :hole10 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole11 %><br />
+    <%= f.text_field :hole11 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole12 %><br />
+    <%= f.text_field :hole12 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole13 %><br />
+    <%= f.text_field :hole13 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole14 %><br />
+    <%= f.text_field :hole14 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole15 %><br />
+    <%= f.text_field :hole15 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole16 %><br />
+    <%= f.text_field :hole16 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole17 %><br />
+    <%= f.text_field :hole17 %>
+  </div>
+  <div class="field">
+    <%= f.label :hole18 %><br />
+    <%= f.text_field :hole18 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

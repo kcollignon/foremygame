@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Score:</b>
+  <%= @round.score %>
+</p>
+
+<p>
+  <b>Fairways:</b>
+  <%= @round.fairways %>
+</p>
+
+<p>
+  <b>Greens:</b>
+  <%= @round.greens %>
+</p>
+
+<p>
+  <b>Putts:</b>
+  <%= @round.putts %>
+</p>
+
+
+<%= link_to 'Edit', edit_round_path(@round) %> |
+<%= link_to 'Back', rounds_path %>
