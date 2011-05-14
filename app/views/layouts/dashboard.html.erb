@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stats</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+	<!-- top lines for style -->
+	<div id="top_green"></div>
+	<div id="top_dark"></div>
+	
+	<div id="wrapper">
+		
+		<div id="header">
+			<!-- logo - editable via logo.png -->
+			<div id="logo"></div>
+			<div id="user_links">
+				Logged in asssss
+				<a href="#">Admin</a>&nbsp;|
+				<a href="#">View Website</a>&nbsp;|
+				<a href="#">Logout</a>
+			</div>
+		</div>
+		
+		<!-- edit navigation items here -->
+		<div id="nav">
+			<ul>
+				<li class="current"><a href="#">Dashboard</a></li>
+				<li><a href="#">My Rounds</a></li>
+				<li><a href="#">My Courses</a></li>
+			</ul>
+		</div>
+		
+		<div id="content">
+			
+			<div id="left">
+				
+				<!-- begin all content here -->
+				<h1 class="dashboard">Dashboard</h1>
+				<%= yield %>
+				<p>Welcome to the dashboard of this web application.</p>
+				
+				<div class="div_header">Form Fields</div>
+				<div class="div_content">
+					<form action="#" method="post">
+						<p>
+							<label>Small Input</label>
+							<input type="text" name="small_input" id="small_input" class="short" />
+							<label>Medium Input</label>
+							<input type="text" name="medium_input" id="medium_input" class="medium" />
+							<label>Long Input</label>
+							<input type="text" name="regular_input" />
+							<span class="sub_text">This would be a small description of the field.</span>
+							<label>Description</label>
+							<textarea name="description" rows="8" cols="40"></textarea>
+						</p>
+						<p><input type="submit" class="submit" value="Submit" /></p>
+					</form>
+						
+				</div>
+				<div class="div_bottom"></div>
+				
+				<br class="clear" />
+				
+				<!-- success -->
+				<p class="alert"><span class="success"></span><span class="success_text">Success! Your item has successfully been added.</span></p>
+				
+				<!-- error -->
+				<p class="alert"><span class="error"></span><span class="error_text">Error! Your item could not be updated. Try Again.</span></p>
+				
+				<div class="div_header">Table Preview</div>
+				<div class="div_content">
+						<table id="mytable" cellspacing="0" summary="A sample table">
+						  <tr>
+							<th scope="col" abbr="Username">Username</th>
+						    <th scope="col" abbr="Email">Email</th>
+						    <th scope="col" abbr="Last Login">Last Login</th>
+							<th scope="col" abbr="Actions">Actions</th>
+						</tr>
+
+						  <tr>
+						    <td class="alt">Admin</td>
+						    <td class="alt">Admin@website.com</td>
+						    <td class="alt">09/06/08</td>
+							<td class="alt">Edit | Delete</td>
+						  </tr>
+						  <tr>
+						    <td>User One</td>
+						    <td>UserOne@website.com</td>
+						    <td>06/24/08</td>
+							<td>Edit | Delete</td>
+						  </tr>
+						  <tr>
+						    <td class="alt">User Two</td>
+						    <td class="alt">UserTwo@website.com</td>
+						    <td class="alt">08/30/08</td>
+							<td class="alt">Edit | Delete</td>
+						  </tr>
+						  <tr>
+						    <td>User Three</td>
+						    <td>UserThree@website.com</td>
+						    <td>10/24/08</td>
+							<td>Edit | Delete</td>
+						  </tr>
+						</table>
+				</div>
+				<div class="div_bottom"></div>
+				
+			</div>
+			
+			<!-- edit sidebar items here -->
+			<div id="sidebar">
+				<div class="sidebar_header">Sidebar</div>
+				<div class="sidebar_content">
+					<ul>
+						<li><a href="#">Themeforest Templates</a></li>
+						<li><a href="#">Development Server</a></li>
+						<li><a href="#">Tutorial Resources</a></li>
+						<li><a href="#">Flashden Templates</a></li>
+						<li><a href="#">Envato Network</a></li>
+					</ul>
+				</div>
+				<div class="sidebar_bottom"></div>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<!-- edit footer items here -->
+			<div id="copyright">Copyright &copy; 2008 Company Name Here</div>
+			<div id="footer_links">
+				Go back to <a href="#">Dashboard</a>&nbsp;|
+				<a href="#">Help</a>&nbsp;|
+				<a href="#">Logout</a>
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>

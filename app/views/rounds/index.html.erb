@@ -1,4 +1,4 @@
-<h1>Listing rounds</h1>
+<h1>Summer Rounds</h1>
 
 <table>
   <tr>
@@ -24,8 +24,23 @@
     <td><%= link_to 'Destroy', round, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
+<tr>
+	<td style="border-top:5px solid black;"><b>AVERAGE</b></td>
+	<td style="border-top:5px solid black;"><b><%= @scoring_average %></b></td>
+	<td style="border-top:5px solid black;"><b><%= @fairways_average %></b></td>
+	<td style="border-top:5px solid black;"><b><%= @greens_average %></b></td>
+	<td style="border-top:5px solid black;"><b><%= @putts_average %></b></td>
+</tr>
+<tr>
+	<td style="border-top:5px solid black;"><b>%</b></td>
+	<td style="border-top:5px solid black;"></td>
+	<td style="border-top:5px solid black;"><b><%= number_to_percentage(@fairways_percentage) %></b></td>
+	<td style="border-top:5px solid black;"><b><%= number_to_percentage(@greens_percentage) %></b></td>
+	<td style="border-top:5px solid black;"></td>
+</tr>
 </table>
 
 <br />
 
 <%= link_to 'New Round', new_round_path %>
+

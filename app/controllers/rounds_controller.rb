@@ -3,6 +3,14 @@ class RoundsController < ApplicationController
   # GET /rounds.xml
   def index
     @rounds = Round.all
+    @scoring_average = Round.average(:score)
+    @fairways_average = Round.average(:fairways)
+    @greens_average = Round.average(:greens)
+    @putts_average = Round.average(:putts)
+    @fairways_percentage = Round.average(:fairways) / 14 * 100
+    @greens_percentage = Round.average(:greens) / 18 * 100
+    @lowest_round = Round.minimum(:score)
+    @highest_round = Round.maximum(:score)
 
     respond_to do |format|
       format.html # index.html.erb
